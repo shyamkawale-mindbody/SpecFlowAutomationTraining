@@ -8,6 +8,7 @@ namespace SpecFlowAutomationTraining.StepDefinitions
     [Binding]
     public class EmergencyContactsStepDefinitions
     {
+        private static Table tbl;
         [When(@"I click on My Info")]
         public void WhenIClickOnMyInfo()
         {
@@ -30,6 +31,7 @@ namespace SpecFlowAutomationTraining.StepDefinitions
         [When(@"I fill emergency contact details")]
         public void WhenIFillEmergencyContactDetails(Table table)
         {
+            tbl = table;
             string name = table.Rows[0]["contact_name"];
             string relationship = table.Rows[0]["relationship"];
             string home_telephone = table.Rows[0]["home_telephone"];
@@ -52,7 +54,11 @@ namespace SpecFlowAutomationTraining.StepDefinitions
         [Then(@"I should see the added records in the table")]
         public void ThenIShouldSeeTheAddedRecordsInTheTable()
         {
-            Console.WriteLine();
+            string actualData = AutomationHooks.driver.FindElement(By.XPath("//div[@class='oxd-table']")).Text;
+
+            string expectedName = tbl.Rows[0]["name"];
+            Assert.Contains(expectedName, actualData);
+            Assert.Contains(tbl.Rows[0]["relationship"], actualData);
         }
     }
 }
