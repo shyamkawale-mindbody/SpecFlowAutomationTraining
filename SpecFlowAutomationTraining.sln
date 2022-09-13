@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowAutomationTraining", "SpecFlowAutomationTraining\SpecFlowAutomationTraining.csproj", "{F3E36789-88D1-4BFE-8B30-A598A64AE716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowAutomationTraining", "SpecFlowAutomationTraining\SpecFlowAutomationTraining.csproj", "{F3E36789-88D1-4BFE-8B30-A598A64AE716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowAPIAutomationTraining", "SpecFlowAPIAutomationTraining\SpecFlowAPIAutomationTraining.csproj", "{4CECCA6F-903D-4DEA-8AF8-9C7068B0F396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F3E36789-88D1-4BFE-8B30-A598A64AE716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E36789-88D1-4BFE-8B30-A598A64AE716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E36789-88D1-4BFE-8B30-A598A64AE716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CECCA6F-903D-4DEA-8AF8-9C7068B0F396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CECCA6F-903D-4DEA-8AF8-9C7068B0F396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CECCA6F-903D-4DEA-8AF8-9C7068B0F396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CECCA6F-903D-4DEA-8AF8-9C7068B0F396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
