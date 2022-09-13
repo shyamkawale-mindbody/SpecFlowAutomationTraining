@@ -1,9 +1,10 @@
-﻿Feature: Employee
+﻿@AddEmployee
+Feature: Employee
 In order to add, edit, delete employee records
 As an admin
 I want to modify the employee details in dashboard
 
-@tag1
+@low @smoke
 Scenario: Add Valid Employee
 	Given I have browser with OrangeHrm Page
 	When I enter username as 'Admin'

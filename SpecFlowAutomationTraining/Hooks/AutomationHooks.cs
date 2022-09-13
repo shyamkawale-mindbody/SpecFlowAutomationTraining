@@ -11,5 +11,15 @@ namespace SpecFlowAutomationTraining.Hooks
     public class AutomationHooks
     {
         public static IWebDriver driver;
+
+        //runs after each scenario wether scenario passed or fail.  
+        [AfterScenario]
+        public void EndScenario()
+        {
+            if (driver != null)
+            {
+                driver.Quit();
+            }
+        }
     }
 }

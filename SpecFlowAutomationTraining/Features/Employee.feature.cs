@@ -19,12 +19,14 @@ namespace SpecFlowAutomationTraining.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [Xunit.TraitAttribute("Category", "AddEmployee")]
     public partial class EmployeeFeature : object, Xunit.IClassFixture<EmployeeFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "AddEmployee"};
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
@@ -84,14 +86,16 @@ namespace SpecFlowAutomationTraining.Features
         [Xunit.SkippableFactAttribute(DisplayName="Add Valid Employee")]
         [Xunit.TraitAttribute("FeatureTitle", "Employee")]
         [Xunit.TraitAttribute("Description", "Add Valid Employee")]
-        [Xunit.TraitAttribute("Category", "tag1")]
+        [Xunit.TraitAttribute("Category", "low")]
+        [Xunit.TraitAttribute("Category", "smoke")]
         public void AddValidEmployee()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "low",
+                    "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Valid Employee", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -101,25 +105,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("I have browser with OrangeHrm Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 9
+#line 10
  testRunner.When("I enter username as \'Admin\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
  testRunner.And("I enter password as \'admin123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
+#line 12
  testRunner.And("I click on login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 13
  testRunner.And("I click on PIM", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 14
  testRunner.And("I click on Add Employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "firstname",
                             "middlename",
                             "lastname",
@@ -129,7 +133,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "password",
                             "confirm_password",
                             "status"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Shyam",
                             "Vilas",
                             "Kawale",
@@ -139,13 +143,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "Welcome@123",
                             "Welcome@123",
                             "disabled"});
-#line 14
- testRunner.And("I fill the add employee section", ((string)(null)), table1, "And ");
-#line hidden
-#line 17
- testRunner.And("I click on save employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.And("I fill the add employee section", ((string)(null)), table2, "And ");
 #line hidden
 #line 18
+ testRunner.And("I click on save employee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
  testRunner.Then("I should be navigate to personal section with added emplyee records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
